@@ -8,26 +8,28 @@ import static org.junit.Assert.assertEquals;
 public class BunTests {
 
     private Bun bun;
+    private final String expectedBunName = "fun_bun";
+    private final float expectedBunPrice = 149.99f;
 
     @Before
     public void setUp() {
 
-        bun = new Bun("fun_bun", 149.99f);
+        bun = new Bun(expectedBunName, expectedBunPrice);
     }
 
     @Test
-    public void getName() {
-        String expected = "fun_bun";
-        String actual = bun.getName();
+    public void getNameTestShowsOk() {
 
-        assertEquals("Не верное название булочки", expected, actual);
+        String actualBunName = bun.getName();
+
+        assertEquals("Не верное название булочки", expectedBunName, actualBunName);
     }
 
     @Test
-    public void getPrice() {
-        float expected = 149.99f;
-        float actual = bun.getPrice();
+    public void getPriceTestShowsOk() {
 
-        assertEquals("Не верное значение стоимости булочки", expected, actual, 0);
+        float actualBunPrice = bun.getPrice();
+
+        assertEquals("Не верное значение стоимости булочки", expectedBunPrice, actualBunPrice, 0);
     }
 }
