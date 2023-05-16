@@ -23,7 +23,7 @@ public class IngredientParamTest {
 
     @Parameterized.Parameters
     public static Object[][] dataForTest() {
-        return new Object[][] {
+        return new Object[][]{
                 {IngredientType.SAUCE, "1000islands", 4.99f},
                 {IngredientType.FILLING, "tomato", 9.99f},
         };
@@ -36,9 +36,8 @@ public class IngredientParamTest {
 
     @Test
     public void paramTest() {
+        IngredientType actualIngredientType = ingredient.getType();
 
-        IngredientType actual = ingredient.getType();
-
-        assertEquals("Не верное значение типа ингредиента", type, actual);
+        assertEquals("Не верное значение типа ингредиента", type, actualIngredientType);
     }
 }

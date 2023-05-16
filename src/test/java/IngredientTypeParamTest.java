@@ -18,7 +18,7 @@ public class IngredientTypeParamTest {
 
     @Parameterized.Parameters
     public static Object[][] dataForTest() {
-        return new Object[][] {
+        return new Object[][]{
                 {IngredientType.SAUCE, "SAUCE"},
                 {IngredientType.FILLING, "FILLING"}
         };

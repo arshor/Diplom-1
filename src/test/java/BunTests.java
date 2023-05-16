@@ -12,13 +12,11 @@ public class BunTests {
 
     @Before
     public void setUp() {
-
         bun = new Bun(expectedBunName, expectedBunPrice);
     }
 
     @Test
     public void getNameTestShowsOk() {
-
         String actualBunName = bun.getName();
 
         assertEquals("Не верное название булочки", expectedBunName, actualBunName);
@@ -26,7 +24,6 @@ public class BunTests {
 
     @Test
     public void getPriceTestShowsOk() {
-
         float actualBunPrice = bun.getPrice();
 
         assertEquals("Не верное значение стоимости булочки", expectedBunPrice, actualBunPrice, 0);

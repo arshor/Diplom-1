@@ -88,15 +88,15 @@ public class BurgerTests {
         burger.addIngredient(ingredientNew);
         List<Ingredient> ingredients = List.of(ingredient, ingredientNew);
 
-        StringBuilder expected = new StringBuilder(String.format("(==== %s ====)%n", bun.getName()));
+        StringBuilder expectedReceipt = new StringBuilder(String.format("(==== %s ====)%n", bun.getName()));
         for (Ingredient ingredient : ingredients) {
-            expected.append(String.format("= %s %s =%n", ingredient.getType().toString().toLowerCase(),
+            expectedReceipt.append(String.format("= %s %s =%n", ingredient.getType().toString().toLowerCase(),
                     ingredient.getName()));
         }
-        expected.append(String.format("(==== %s ====)%n", bun.getName()));
-        expected.append(String.format("%nPrice: %f%n", burger.getPrice()));
+        expectedReceipt.append(String.format("(==== %s ====)%n", bun.getName()));
+        expectedReceipt.append(String.format("%nPrice: %f%n", burger.getPrice()));
 
-        assertEquals("Стоимость бургера посчитана не верно", expected.toString(), burger.getReceipt());
+        assertEquals("Стоимость бургера посчитана не верно", expectedReceipt.toString(), burger.getReceipt());
     }
 
 }

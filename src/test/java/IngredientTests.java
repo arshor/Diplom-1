@@ -18,17 +18,17 @@ public class IngredientTests {
 
     @Test
     public void getNameTestShowsOk() {
-
         String actualIngredientName = ingredient.getName();
 
-        assertEquals("Не верное название ингредиента", expectedIngredientName, actualIngredientName);
+        assertEquals("Не верное название ингредиента",
+                expectedIngredientName, actualIngredientName);
     }
 
     @Test
     public void getPriceTestShowsOk() {
-
         float actualIngredientPrice = ingredient.getPrice();
 
-        assertEquals("Не верное значение стоимости ингредиента", expectedIngredientPrice, actualIngredientPrice, 0);
+        assertEquals("Не верное значение стоимости ингредиента",
+                expectedIngredientPrice, actualIngredientPrice, 0);
     }
 }
