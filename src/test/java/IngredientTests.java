@@ -1,7 +1,7 @@
-package praktikum;
-
 import org.junit.Test;
 import org.junit.Before;
+import praktikum.Ingredient;
+import praktikum.IngredientType;
 
 import static org.junit.Assert.assertEquals;
 
@@ -17,7 +17,7 @@ public class IngredientTests {
     }
 
     @Test
-    public void getNameTest() {
+    public void getNameTestShowsOk() {
 
         String actualIngredientName = ingredient.getName();
 
@@ -25,7 +25,7 @@ public class IngredientTests {
     }
 
     @Test
-    public void getPriceTest() {
+    public void getPriceTestShowsOk() {
 
         float actualIngredientPrice = ingredient.getPrice();
 

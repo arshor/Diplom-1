@@ -1,14 +1,13 @@
-package praktikum;
-
 import org.junit.Test;
 import org.junit.Before;
+import praktikum.Bun;
 
 import static org.junit.Assert.assertEquals;
 
 public class BunTests {
 
     private Bun bun;
-    private final String expectedBunName = "fun_bun";
+    private final String expectedBunName = "fun bun";
     private final float expectedBunPrice = 149.99f;
 
     @Before
